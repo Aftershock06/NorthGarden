@@ -1,0 +1,1 @@
+This repo is for a homebased webserver to monitor a small garden 
