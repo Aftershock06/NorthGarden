@@ -26,6 +26,7 @@ body{
 .header {
     font-size: 2em;
     text-align: center;
+    text-transform: uppercase;
     grid-column-start: 1;
     grid-column-end: -1;
     color: rgb(32, 32, 32);
