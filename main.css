@@ -1,9 +1,12 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body{
     background-color: white;
     padding: 20px;
 }
 
-  .container {
+.container {
     max-width: 900px;
     margin: 0 auto;
     display: grid;
@@ -13,7 +16,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  .container > * { 
+.container > * { 
     background-color: royalblue;
     color: white;
     border-radius: 3px;
