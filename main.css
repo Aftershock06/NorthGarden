@@ -17,6 +17,11 @@ body{
     grid-column-end: -1;
  }
   
+ .footer {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 
 h1{
     color: white;
