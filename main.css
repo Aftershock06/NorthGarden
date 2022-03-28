@@ -10,8 +10,14 @@ body{
     grid-template-columns: 1fr;
     grid-gap: 7px;
     text-align: center;
-    background-color: rgba(0,0,128,.5);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .container > * { 
+    background-color: royalblue;
+    color: white;
+    border-radius: 3px;
+    padding: 16px;
   }
   
 .header {
