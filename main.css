@@ -1,5 +1,5 @@
 body{
-    background-color: aquamarine;
+    background-color:navy;
 }
 
   .container {
@@ -16,6 +16,7 @@ body{
     text-align: center;
     grid-column-start: 1;
     grid-column-end: -1;
+    color: lightgray;
  }
   
  .footer {
@@ -23,6 +24,7 @@ body{
     text-align: center;
     grid-column-start: 1;
     grid-column-end: -1;
+    color: lightgray;
   }
 
 h1{
