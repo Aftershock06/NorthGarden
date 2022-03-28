@@ -2,6 +2,18 @@ body{
     background-color: aquamarine;
 }
 
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .10fr 1fr 0.25fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+  
+
 h1{
     color: white;
 }
