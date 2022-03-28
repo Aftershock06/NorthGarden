@@ -1,5 +1,6 @@
 body{
     background-color:navy;
+    padding: 20px;
 }
 
   .container {
@@ -9,6 +10,7 @@ body{
     grid-template-columns: 1fr;
     grid-gap: 7px;
     text-align: center;
+    background-color: lightgray;
   }
   
 .header {
@@ -16,7 +18,7 @@ body{
     text-align: center;
     grid-column-start: 1;
     grid-column-end: -1;
-    color: lightgray;
+    color: rgb(32, 32, 32);
  }
   
  .footer {
@@ -24,7 +26,7 @@ body{
     text-align: center;
     grid-column-start: 1;
     grid-column-end: -1;
-    color: lightgray;
+    color: rgb(32, 32, 32);
   }
 
 h1{
