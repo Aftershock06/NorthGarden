@@ -12,9 +12,20 @@
     
     getData()
     
-    async fuction getData(){
+    async function getData() {
         const response = await fetch('data.csv');
         const data = await response.text();
+
+        const table = data.split('\n').slice(1);
+        table.forEach(row=> {
+            const columns = row.split(',');
+            const time = columns[0];
+            const zone1 = columns[1];
+            const temp = columns[2];
+
+        });
+
+
     }
     </script>
     <div class="container">
