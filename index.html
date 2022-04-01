@@ -9,7 +9,13 @@
 </head>
 <body>
     <script>
-        console.log('Growing the Garden!')
+    
+    getData()
+    
+    async fuction getData(){
+        const response = await fetch('data.csv');
+        const data = await response.text();
+    }
     </script>
     <div class="container">
         <header class="header">Welcome to the Garden</header>
