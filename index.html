@@ -9,31 +9,25 @@
 </head>
 <body>
     <script>
-    
-    getData()
-    
-    async function getData() {
+      async function getData() {
         const response = await fetch('data.csv');
         const data = await response.text();
-
-        const table = data.split('\n').slice(1);
-        table.forEach(row=> {
-            const columns = row.split(',');
-            const time = columns[0];
-            const zone1 = columns[1];
-            const temp = columns[2];
-        document.getElementById("myLink").innerHTML= temp[0]
-
-        });
-
+        const lastRow = data.split('\n').slice(-1);
+        console.log(data)
 
     }
+
+    getData()
+
     </script>
     <div class="container">
         <header class="header">Welcome to the Garden</header>
         <main class="main">
             <h1>This is the Family garden</h1></main>
-            <div class="myLink"></div>
+            <div>
+                <p>The current Temperature is:</p>
+                <p id="temp">56</p>
+            </div>
         <footer class="footer">Thank you for Visiting!</footer>
     </div>
 </body>
