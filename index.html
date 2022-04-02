@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>DaisyGarden</title>
+    <title>The South Garden</title>
 </head>
 <body>
     <script>
@@ -16,21 +16,13 @@
         const response = await fetch('data.csv');
         const data = await response.text();
 
-        const table = data.split('\n').slice(1);
-        table.forEach(row=> {
-            const columns = row.split(',');
-            const time = columns[0];
-            const zone1 = columns[1];
-            const temp = columns[2];
-        document.getElementById("myLink").innerHTML= temp[0]
-
-        });
+    
 
 
     }
     </script>
     <div class="container">
-        <header class="header">Welcome to the Garden</header>
+        <header class="header">Welcome to the South Garden</header>
         <main class="main">
             <h1>This is the Family garden</h1></main>
             <div class="myLink"></div>
