@@ -5,28 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <title>DaisyGarden</title>
 </head>
 <body>
     <script>
-      async function getData() {
-        const response = await fetch('data.csv');
-        const data = await response.text();
-        const lastRow = data.split('\n').slice(-1);
-        console.log(data)
+     $(document).ready(function(){
+         $.ajax({
+             type: "GET",
+             url: "data.csv",
+             dataType: "text",
+             success: function(data) {processData(data)}
+         });
 
-    }
+         function processData(data){
+             var lines = data.trim().split('\n');
+             var lastLine = lines[lines.length-1].split(',')
 
-    getData()
+             console.log(lastLine)
+             var time = lastLine[0];
+             var soil = lastLine[1];
+             var temp = lastLine[2];
+            
+             document.getElementById('time').innerHTML=time;
+             document.getElementById('temp').innerHTML=temp;
+             document.getElementById('soil').innerHTML=soil;
+             
+           
+        }         
+     })
 
     </script>
     <div class="container">
-        <header class="header">Welcome to the Garden</header>
+        <header class="header">Welcome to the  South Garden</header>
         <main class="main">
-            <h1>This is the Family garden</h1></main>
+            <h1>This is the Branch Family Garden</h1></main>
             <div>
-                <p>The current Temperature is:</p>
-                <p id="temp">56</p>
+                <table>
+                   <tr>
+                    <td>The Last Update was at:</td>
+                    <td id="time"> -- </td>
+                </tr>
+                <tr>
+                    <td> The Temperature: </td>
+                    <td id="temp"></td>
+                </tr>
+                <tr>
+                    <td>The Soil Moisture: </td>
+                    <td id="soil"></td>
+                </tr>
+                </table>
+               
+            
+
             </div>
         <footer class="footer">Thank you for Visiting!</footer>
     </div>
