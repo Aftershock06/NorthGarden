@@ -1,0 +1,31 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+	background-color: #d1d5bb;
+	padding: 20px;
+}
+
+.container {
+	max-width: 1500px;
+	min-height: 1000px;
+	margin: 0 auto;
+	display: grid;
+}
+
+.container > * { 
+    background-color: #ccd5aa;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.header{
+	
+}
+
+.main {
+	
+}
+
