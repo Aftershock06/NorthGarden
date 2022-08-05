@@ -29,15 +29,16 @@
              var time = lastLine[0];
              var soil = lastLine[1];
              var temp = lastLine[2];
+			 const date = document.lastModified;
             
              document.getElementById('time').innerHTML=time;
              document.getElementById('temp').innerHTML=temp;
              document.getElementById('soil').innerHTML=soil;
+			 document.getElementById('update').innerHTML=date;
         }         
      })
 
-	 const date = document.lastModified;
-	 document.getElementById('update').innerHTML = date;
+	 
 
     </script>
 	
@@ -85,7 +86,7 @@
 	<!--- Footer ---> 
 	<div class="footer">
 		<h2>Thank you for Visiting!</h2>
-		<H4>This site was last updated:</H4>
+		<p>This site was last updated:</p>
 		<p id="update"></p>
 	</div>
 </div>
