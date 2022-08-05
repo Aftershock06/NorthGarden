@@ -19,6 +19,12 @@ html, body{
   display: table-cell;
   padding: 12px;
 }
+.full-round {
+  border-radius: 15px
+}
+.left-round {
+  border-radius: 15px 0px 0px 15px;
+}
 /*
 .container {
     max-width: 1600px;

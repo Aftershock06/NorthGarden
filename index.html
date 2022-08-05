@@ -11,41 +11,12 @@
     <title>DaisyGarden</title>
 </head>
 <body>
-    <script>
-     $(document).ready(function(){
-         $.ajax({
-             type: "GET",
-             url: "data.csv",
-             dataType: "text",
-             success: function(data) {processData(data)}
-         });
-
-         function processData(data){
-             var lines = data.trim().split('\n');
-             var lastLine = lines[lines.length-1].split(',')
-
-             console.log(lastLine)
-             
-             var time = lastLine[0];
-             var soil = lastLine[1];
-             var temp = lastLine[2];
-			 const date = document.lastModified;
-            
-             document.getElementById('time').innerHTML=time;
-             document.getElementById('temp').innerHTML=temp;
-             document.getElementById('soil').innerHTML=soil;
-			 document.getElementById('update').innerHTML=date;
-        }         
-     })
-
-	 
-
-    </script>
+    <script src="js/myscript.js"></script>
 	
-    <div class="w3-blue full-height">
+    <div class="w3-blue full-height full-round">
 		
 		<!--- SideBar ---> 
-			<div class="w3-sidebar w3-light-grey w3-bar-block full-height" 
+			<div class="w3-sidebar w3-light-grey w3-bar-block full-height left-round" 
 				 style="width: 20%; 
 						padding: 12px;"> 
 				
@@ -66,17 +37,17 @@
       		<!-- Title --> <h2>This is the Branch Family Garden</h2>
 			<div class="w3-container w3-center col-container">
             <!-- Card 1 --><div class= "w3-col s4">
-				<div class="w3-card w3-white" style="width:80%">
+				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
                   <p> Last Update: </p><hr>
 					<p id="time"> -- </p> </div></div></div>
 			<!--- Card 2 --><div class = "w3-col s4">
-				<div class="w3-card w3-white" style="width:80%">
+				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
              	<p>The Temperature:</p><hr>
 					<p id = "temp"> -- </p></div></div></div>
              <!-- Card 3 --> <div class ="w3-col s4">
-				<div class="w3-card w3-white" style="width:80%">
+				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
               <p>The Soil Moisture: </p><hr>
 					<p id="soil">--</p></div></div></div>
