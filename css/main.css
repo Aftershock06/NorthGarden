@@ -25,6 +25,10 @@ html, body{
 .left-round {
   border-radius: 15px 0px 0px 15px;
 }
+hr.card{
+  border: 1px solid green;
+  border-radius: 3px;
+}
 /*
 .container {
     max-width: 1600px;
@@ -57,10 +61,5 @@ html, body{
 }
   */
 
- .footer {
-    font-size: 1em;
-    font-variant: small-caps;
-    text-align: center;
-    color: #FFF;
- }
+ 
 
