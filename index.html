@@ -36,6 +36,9 @@
         }         
      })
 
+	 const date = document.lastModified;
+	 document.getElementById('update').innerHTML = date;
+
     </script>
 	
     <div class="w3-blue full-height">
@@ -80,7 +83,11 @@
 		</div><!--- End of Container ---> 
 	</div>
 	<!--- Footer ---> 
-	<div class="footer">Thank you for Visiting!</div>
+	<div class="footer">
+		<h2>Thank you for Visiting!</h2>
+		<H4>This site was last updated:</H4>
+		<p id="update"></p>
+	</div>
 </div>
 </body>
 </html>
