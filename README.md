@@ -31,10 +31,10 @@ Now you have found all your network connection information, it’s time to edit 
 sudo nano /etc/dhcpcd.conf
 If you haven’t edited the file previously, it will mainly contain various comment lines preceded by a hash (#) symbol. At the bottom, add the following lines, replacing the emboldened names with your own network details:
 
-interface <strong>NETWORK</strong> 
-static ip_address=<strong>STATIC_IP</strong>/24
-static routers=<strong>ROUTER_IP</strong> 
-static domain_name_servers=<strong>DNS_IP</strong>
+interface <strong>NETWORK</strong> <br>
+static ip_address=<strong>STATIC_IP</strong>/24 </br>
+static routers=<strong>ROUTER_IP</strong> </br>
+static domain_name_servers=<strong>DNS_IP</strong> </br> 
 Replace the emboldened names as follows:
 
 • NETWORK – your network connection type: eth0 (Ethernet) or wlan0 (wireless).
