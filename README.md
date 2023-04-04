@@ -1,63 +1,44 @@
 # This repo is for a homebased webserver to monitor a small garden
 > Just using this space to keep notes of the work that is happening; 
 
-### Steps/Process: 
+## Steps/Process: 
 
-1. Install Raspbian Lite on an SD Card and Installing on Raspberry Pi Zero 
-2. Updated the domain files so the IP address stays the same no matter what. 
+### Step. 1 Create new SD Card for Pi  
+Install Raspbian Lite on an SD Card and Installing on Raspberry Pi Zero 
 
-To find the Raspberry Pi’s current IP address, enter the following command in a Terminal window:
-hostname -I
-• Your router’s gateway IP address – the one used to contact it from the local network, not its public IP. It varies depending on the router model, but typically starts with 192.168.
+### Step. 2 Maintain IP Address
+Updated the domain files so the IP address stays the same no matter what. [Guide](https://github.com/Aftershock06/NorthGarden/blob/master/ipAddressSteps.md)
 
-To find it, enter the following command and note the first IP address given:
+### Step. 3 Install Git 
 
+SSHing in to the Pi and updating it and install git 
 
-ip r | grep default
-Raspberry Pi router gateway IP
-• Your router’s DNS (Domain Name System) IP address. This is typically the same as its gateway address, but may be set to another value to use an alternative DNS – such as 8.8.8.8 for Google, or 1.1.1.1 for Cloudflare.
+```
+sudo apt upgrade 
+sudo apt list --upgradeable 
+``` 
+> upgrades all available sources 
+```
+sudo apt install git 
+```
 
-To find the current DNS IP address, enter the command:
+### Step. 4 Install Apache
 
-sudo nano /etc/resolv.conf
-Raspberry Pi DNS IP
-Note the IP address after nameserver – that's the DNS address – and then press Ctrl + X to close the file.
+```
+sudo apt install apache2 -y
+sudo service apache2 status
+```
 
-2. Add Static IP Settings
-Now you have found all your network connection information, it’s time to edit the dhcpcd.conf configuration file to add the settings you need to set up a static IP address for your Raspberry Pi:
+### Step. 5 Clone this Git 
 
-sudo nano /etc/dhcpcd.conf
-If you haven’t edited the file previously, it will mainly contain various comment lines preceded by a hash (#) symbol. At the bottom, add the following lines, replacing the emboldened names with your own network details:
+Cloning the git repo into the var/www/html files
 
-interface <strong>NETWORK</strong> <br>
-static ip_address=<strong>STATIC_IP</strong>/24 </br>
-static routers=<strong>ROUTER_IP</strong> </br>
-static domain_name_servers=<strong>DNS_IP</strong> </br> 
-Replace the emboldened names as follows:
+### Step. 6 Setup Enviro-Grow 
 
-• NETWORK – your network connection type: eth0 (Ethernet) or wlan0 (wireless).
+Setting up the enviro grow to add data to a new file envirogrow.csv
+ 
+<details>
+  <summary>Test</summary> 
+   This is a test to see how things work. 
 
-• STATIC_IP – the static IP address you want to set for the Raspberry Pi.
-
-
-• ROUTER_IP – the gateway IP address for your router on the local network.
-
-• DNS_IP – the DNS IP address (typically the same as your router’s gateway address).
-
-Here is an example configuration to set the static IP to 192.168.1.120 with a wireless connection to a router at 192.168.1.254:
-
-interface wlan0
-static ip_address=192.168.1.120/24
-static routers=192.168.1.254
-static domain_name_servers=192.168.1.254
-
-4. SSHing in to the Pi and updating it and install git 
-5.  sudo apt upgrade 
-6.  sudo apt list --upgradeable #upgrades all available sources 
-7.  sudo apt install git 
-8.  Install Apache
-9.    sudo apt install apache2 -y
-10.   sudo service apache2 status
-11. Cloning the git repo into the var/www/html files
-12. setting up the enviro grow to add data to a new file envirogrow.csv
-13. 
+</details>
