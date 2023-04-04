@@ -1,12 +1,10 @@
-This repo is for a homebased webserver to monitor a small garden
+# This repo is for a homebased webserver to monitor a small garden
+> Just using this space to keep notes of the work that is happening; 
 
+### Steps/Process: 
 
-Just using this space to keep notes of the work that is happening; 
-
-Steps: 
-
-1. Install Raspbian Lite on an SD Card and Installing 
-2. updated the domain files so the IP address stays the same no matter what. 
+1. Install Raspbian Lite on an SD Card and Installing on Raspberry Pi Zero 
+2. Updated the domain files so the IP address stays the same no matter what. 
 
 To find the Raspberry Pi’s current IP address, enter the following command in a Terminal window:
 hostname -I
