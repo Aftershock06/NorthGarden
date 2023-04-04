@@ -37,8 +37,4 @@ Cloning the git repo into the var/www/html files
 
 Setting up the enviro grow to add data to a new file envirogrow.csv
  
-<details>
-  <summary>Test</summary> 
-   This is a test to see how things work. 
 
-</details>
