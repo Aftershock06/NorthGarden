@@ -1,6 +1,17 @@
 # This repo is for a homebased webserver to monitor a small garden
 > Just using this space to keep notes of the work that is happening; 
 
+
+- [Step 1](step.-1-create-new-sd-card-for-pi)
+- [Step 2](step.-2-maintain-ip-addess)
+- [Step 1](step.-1-create-new-sd-card-for-pi)
+- [Step 1](step.-1-create-new-sd-card-for-pi)
+- [Step 1](step.-1-create-new-sd-card-for-pi)
+- [Step 1](step.-1-create-new-sd-card-for-pi)
+
+
+## Example
+
 ## Steps/Process: 
 
 ### Step. 1 Create new SD Card for Pi  
