@@ -47,3 +47,6 @@ Cloning the git repo into the var/www/html files
 Setting up the enviro grow to add data to a new file envirogrow.csv
  
 
+### References Documents 
+
+[Creating a Flask Server](https://towardsdatascience.com/python-webserver-with-flask-and-raspberry-pi-398423cc6f5d)
