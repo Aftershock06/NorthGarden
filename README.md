@@ -1,18 +1,16 @@
 # This repo is for a homebased webserver to monitor a small garden
 > Just using this space to keep notes of the work that is happening; 
 
+## Steps
+- [Create New SD Card](#step1)
+- [Change IP Address](#step2)
+- [Install Git](#step3)
+- [Install Apache](#step4)
+- [Clone this Git](#step5)
+- [Setup Data inputs as Jsons](#step6)
 
-- [Step 1](#step1)
-- [Step 2](#step2)
-- [Step 3](#step3)
-- [Step 4](#step4)
-- [Step 5](#step5)
-- [Step 6](#step6)
 
-
-## Example
-
-## Steps/Process: 
+# Let's Get Started
 
 ### Step. 1 Create new SD Card for Pi  <a name="step1"></a>
 Install Raspbian Lite on an SD Card and Installing on Raspberry Pi Zero 
