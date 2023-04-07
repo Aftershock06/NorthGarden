@@ -52,6 +52,10 @@ sudo apt-get install python3-flask
 ```
 mkdir gardenPiWebServer
 
+<<<<<<< HEAD
+=======
+```
+>>>>>>> fbd02a8572a46dbffa9664d1a3ce5a4fb0f1e4d8
 
 ### Step 5. Clone this Git <a name="step5"></a>
 
