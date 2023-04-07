@@ -1,0 +1,65 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html, body{
+    background-color: white;
+    padding: 20px;
+	  height: 600px;
+}
+
+.full-height {
+	height: 600px;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  padding: 12px;
+}
+.full-round {
+  border-radius: 15px
+}
+.left-round {
+  border-radius: 15px 0px 0px 15px;
+}
+hr.card{
+  border: 1px solid green;
+  border-radius: 3px;
+}
+/*
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 7px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.container > * { 
+    background-color: royalblue;
+    color: white;
+    border-radius: 3px;
+    padding: 16px;
+  }
+  
+.header {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    color: rgb(32, 32, 32);
+ }
+
+.main {
+	margin-left:20%;
+}
+  */
+
+ 
+
