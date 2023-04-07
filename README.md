@@ -1,6 +1,10 @@
 # This repo is for a homebased webserver to monitor a small garden
 > Just using this space to keep notes of the work that is happening; 
 
+# Planning Process 
+ 
+ -[Project Journal](https://github.com/Aftershock06/NorthGarden/blob/master/projectJournal.md)
+
 ## Steps
 - [Create New SD Card](#step1)
 - [Change IP Address](#step2)
