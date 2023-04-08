@@ -5,6 +5,7 @@ Code Created by Taurean Branch
 from flask import Flask, render_template, request, jsonify
 import datetime
 import pandas as pd
+import csv
 
 app = Flask(__name__)
 @app.route('/')
@@ -12,12 +13,23 @@ app = Flask(__name__)
 def index():
         now = datetime.datetime.now()
         timeString = now.strftime("%m-%d-%Y %H:%M")
+
+        with open('gardendata.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        last_row = list(reader)[-1]
+        time = last_row[0]
+        temperature = last_row[1]
+        humidity = last_row[2]
+        light = last_row[3]
             
         templateData =  {
                 'title': 'Hello',
-                'time' : timeString
+                'time' : timeString,
+                'temperature': temperature,
+                'humidity': humidity,
+                'light': light
+        }
 
-                }
         return render_template('index.html', **templateData)
 
 
@@ -39,7 +51,7 @@ def handle_gardendata():
         'humidity': humidity,
         'light': light
     }
-    
+
     return jsonify(response_data)
 
 if __name__ == '__main__':
