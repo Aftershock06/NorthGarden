@@ -11,3 +11,7 @@ Started the a new project journal to outline the work I have already done in the
 ## April 8th 
 
 1. trying to build out the program and do a test run
+2. I was able to use this script in the terminal to test the POST and it worked 
+    ```
+    curl -X POST -H "Content-Type: application/json" -d '{"time": "04-08-2023 13:58","temperature": 20.5, "humidity": 50, "light": 75}' http://192.168.86.43/gardendata
+    ```
