@@ -21,6 +21,8 @@ def index():
 
 @app.route('/gardendata', methods=['POST'])
 def handle_gardendata():
+    now = datetime.datetime.now()
+    timeString = now.strftime("%m-%d-%Y %H:%M")
     data = request.json
     temperature = data['temperature']
     humidity = data['humidity']
@@ -31,7 +33,7 @@ def handle_gardendata():
         writer.writerow([date,temperature, humidity, light])
 
     response_data = {
-        'date': date,
+        'date': timeString,
         'temperature': temperature,
         'humidity' : humidity,
         'light' : light
