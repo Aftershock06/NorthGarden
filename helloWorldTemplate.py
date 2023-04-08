@@ -4,7 +4,6 @@ Code Created by Taurean Branch
 
 from flask import Flask, render_template, request, jsonify
 import datetime
-import pandas as pd
 import csv
 
 app = Flask(__name__)
