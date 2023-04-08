@@ -12,6 +12,8 @@ app = Flask(__name__)
 def index():
         now = datetime.datetime.now()
         timeString = now.strftime("%m-%d-%Y %H:%M")
+
+        with open('gardenData.csv', 'r')
             
         templateData =  {
                 'title': 'Hello',
