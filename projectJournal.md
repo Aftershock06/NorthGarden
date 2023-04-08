@@ -15,3 +15,4 @@ Started the a new project journal to outline the work I have already done in the
     ```
     curl -X POST -H "Content-Type: application/json" -d '{"time": "04-08-2023 13:58","temperature": 20.5, "humidity": 50, "light": 75}' http://192.168.86.43/gardendata
     ```
+3. the current issue is that the pico is not actively recording data. 
