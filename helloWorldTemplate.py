@@ -30,7 +30,7 @@ def handle_gardendata():
 
     with open('gardendata.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([date,temperature, humidity, light])
+        writer.writerow([timeString,temperature, humidity, light])
 
     response_data = {
         'date': timeString,
