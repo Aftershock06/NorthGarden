@@ -25,7 +25,7 @@ def handle_gardendata():
     data = request.json
     time = data['timestamp']
     readings = data['readings']
-    temperature = readings['temperature']
+    temperature = (readings['temperature'] * 9/5)+32
     humidity = readings['humidity']
     light = readings['luminance']
 
