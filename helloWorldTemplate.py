@@ -33,9 +33,9 @@ def handle_gardendata():
         writer.writerow([timeString,temperature, humidity, light])
 
     response_data = {
-        'date': timeString,
-        'temperature': temperature,
-        'humidity' : humidity,
+        'lastUpdate': timeString,
+        'lastTemp': temperature,
+        'lastHumidity' : humidity,
         'light' : light
     }
 

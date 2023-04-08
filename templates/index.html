@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <title>DaisyGarden</title>
+    <title>{{Title}}</title>
 </head>
 <body>
     <script src="js/myscript.js"></script>
@@ -41,17 +41,17 @@
 				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
                   <p> Last Update: </p><hr class="card">
-					<p id="time"> -- </p> </div></div></div>
+					<p id="time"> {{lastUpdate}}</p> </div></div></div>
 			<!--- Card 2 --><div class = "w3-col s4">
 				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
              	<p>The Temperature:</p><hr class="card">
-					<p id = "temp"> -- </p></div></div></div>
+					<p id = "temp"> {{lastTemp}} </p></div></div></div>
              <!-- Card 3 --> <div class ="w3-col s4">
 				<div class="w3-card w3-white full-round" style="width:80%">
 					<div class="w3-container w3-center">
               <p>The Soil Moisture: </p><hr class="card">
-					<p id="soil">--</p></div></div></div>
+					<p id="soil">-{{lastHumidity}}/p></div></div></div>
 					</div>
 		</div><!--- End of Middle content ---> 
 	</div>
