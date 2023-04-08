@@ -28,9 +28,10 @@ def handle_gardendata():
 
     with open('gardendata.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([temperature, humidity, light])
+        writer.writerow([date,temperature, humidity, light])
 
     response_data = {
+        'date': date,
         'temperature': temperature,
         'humidity' : humidity,
         'light' : light

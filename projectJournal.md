@@ -7,3 +7,7 @@ Started the a new project journal to outline the work I have already done in the
 3. Setup the ada-fruit.io site to gather the data
 4. updating the webfiles with visual studio code but having issues with merging files with extension
 5. 
+
+## April 8th 
+
+1. trying to build out the program and do a test run
