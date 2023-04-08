@@ -23,7 +23,7 @@ def index():
 @app.route('/gardendata', methods=['POST'])
 def handle_gardendata():
     data = request.json
-    time = data['time']
+    time = data['timestamp']
     readings = data['readings']
     temperature = readings['temperature']
     humidity = readings['humidity']
