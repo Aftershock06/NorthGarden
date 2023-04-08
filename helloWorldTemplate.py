@@ -22,20 +22,19 @@ def index():
 
 @app.route('/gardendata', methods=['POST'])
 def handle_gardendata():
-    now = datetime.datetime.now()
-    timeString = now.strftime("%m-%d-%Y %H:%M")
     data = request.json
-    data = data['readings']
-    temperature = data['temperature']
-    humidity = data['humidity']
-    light = data['light']
+    time = data['time']
+    readings = data['readings']
+    temperature = readings['temperature']
+    humidity = readings['humidity']
+    light = readings['light']
 
     with open('gardendata.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([timeString,temperature, humidity, light])
+        writer.writerow([time,temperature, humidity, light])
 
     response_data = {
-        'lastUpdate': timeString,
+        'lastUpdate': time,
         'lastTemp': temperature,
         'lastHumidity' : humidity,
         'light' : light
