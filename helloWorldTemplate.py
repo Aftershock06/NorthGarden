@@ -31,8 +31,8 @@ def handle_gardendata():
         writer.writerow([temperature, humidity, light])
 
     response_data = {
-        'temperature': temperature
-        'humidity' : humidity
+        'temperature': temperature,
+        'humidity' : humidity,
         'light' : light
     }
 
