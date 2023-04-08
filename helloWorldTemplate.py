@@ -25,6 +25,7 @@ def handle_gardendata():
     now = datetime.datetime.now()
     timeString = now.strftime("%m-%d-%Y %H:%M")
     data = request.json
+    data = data['readings']
     temperature = data['temperature']
     humidity = data['humidity']
     light = data['light']
