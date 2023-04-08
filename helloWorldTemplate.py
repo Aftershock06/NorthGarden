@@ -27,7 +27,7 @@ def handle_gardendata():
     readings = data['readings']
     temperature = readings['temperature']
     humidity = readings['humidity']
-    light = readings['light']
+    light = readings['luminance']
 
     with open('gardendata.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
