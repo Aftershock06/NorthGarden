@@ -34,6 +34,12 @@ def handle_gardendata():
         writer = csv.writer(csvfile)
         writer.writerow([time,temperature, humidity, light])
 
+    response_data = {
+        'temperature': temperature,
+        'humidity': humidity,
+        'light': light
+    }
+    
     return jsonify(response_data)
 
 if __name__ == '__main__':
