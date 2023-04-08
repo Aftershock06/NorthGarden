@@ -12,6 +12,7 @@ app = Flask(__name__)
 def index():
         now = datetime.datetime.now()
         timeString = now.strftime("%m-%d-%Y %H:%M")
+            
         templateData =  {
                 'title': 'Hello',
                 'time' : timeString
