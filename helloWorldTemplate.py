@@ -14,12 +14,12 @@ def index():
         timeString = now.strftime("%m-%d-%Y %H:%M")
 
         with open('gardendata.csv', 'r') as csvfile:
-        reader = csv.reader(csvfile)
-        last_row = list(reader)[-1]
-        time = last_row[0]
-        temperature = last_row[1]
-        humidity = last_row[2]
-        light = last_row[3]
+            reader = csv.reader(csvfile)
+            last_row = list(reader)[-1]
+            time = last_row[0]
+            temperature = last_row[1]
+            humidity = last_row[2]
+            light = last_row[3]
             
         templateData =  {
                 'title': 'Hello',
