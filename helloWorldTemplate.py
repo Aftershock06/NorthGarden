@@ -3,7 +3,7 @@ Code Created by Taurean Branch
 '''
 
 from flask import Flask, render_template, request, jsonify, url_for, redirect
-import datetime
+from datetime import datetime
 import csv
 
 app = Flask(__name__)
@@ -14,16 +14,18 @@ def index():
         timeString = now.strftime("%m-%d-%Y %H:%M")
 
         with open('gardendata.csv', 'r') as csvfile:
-            reader = csv.reader(csvfile)
-            last_row = list(reader)[-1]
-            time = last_row[0]
-            temperature = last_row[1]
-            humidity = last_row[2]
-            light = last_row[3]
+		reader = csv.reader(csvfile)
+		last_row = list(reader)[-1]
+		time = last_row[0
+		newtime = datetime.strptime(time,"%Y-%m-%dT%H:%M:%SZ")
+		newtime = newtime.strft(time, "%m-%d-%y %H:%M")
+		temperature = last_row[1]
+		humidity = last_row[2]
+		light = last_row[3]
             
         templateData =  {
                 'title': 'Hello',
-                'time' : timeString,
+                'time' : newtime,
                 'temperature': temperature,
                 'humidity': humidity,
                 'light': light
