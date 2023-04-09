@@ -2,7 +2,7 @@
 Code Created by Taurean Branch
 '''
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for, redirect
 import datetime
 import csv
 
@@ -45,13 +45,7 @@ def handle_gardendata():
         writer = csv.writer(csvfile)
         writer.writerow([time,temperature, humidity, light])
 
-    response_data = {
-        'temperature': temperature,
-        'humidity': humidity,
-        'light': light
-    }
-
-    return jsonify(response_data)
+    return jsonify(success=True)
 
 if __name__ == '__main__':
         app.run(debug=True, port=80, host='0.0.0.0')
