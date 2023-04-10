@@ -14,7 +14,7 @@ def index():
     timeString = now.strftime("%m-%d-%Y %H:%M")
 
     with open('gardendata.csv', 'r') as csvfile:
-	    reader = csv.reader(csvfile)
+        reader = csv.reader(csvfile)
         last_row = list(reader)[-1]
         time = last_row[0]
         newtime = datetime.strptime(time,"%Y-%m-%dT%H:%M:%SZ")
