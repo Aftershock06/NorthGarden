@@ -10,10 +10,10 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-        now = datetime.datetime.now()
-        timeString = now.strftime("%m-%d-%Y %H:%M")
+    now = datetime.datetime.now()
+    timeString = now.strftime("%m-%d-%Y %H:%M")
 
-        with open('gardendata.csv', 'r') as csvfile:
+    with open('gardendata.csv', 'r') as csvfile:
 		reader = csv.reader(csvfile)
 		last_row = list(reader)[-1]
 		time = last_row[0
@@ -23,15 +23,15 @@ def index():
 		humidity = last_row[2]
 		light = last_row[3]
             
-        templateData =  {
-                'title': 'Hello',
-                'time' : newtime,
-                'temperature': temperature,
-                'humidity': humidity,
-                'light': light
+    templateData =  {
+        'title': 'Hello',
+        'time' : newtime,
+        'temperature': temperature,
+        'humidity': humidity,
+        'light': light
         }
 
-        return render_template('index.html', **templateData)
+    return render_template('index.html', **templateData)
 
 
 @app.route('/gardendata', methods=['POST'])
