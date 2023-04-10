@@ -10,9 +10,6 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-    now = datetime.datetime.now()
-    timeString = now.strftime("%m-%d-%Y %H:%M")
-
     with open('gardendata.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
         last_row = list(reader)[-1]
