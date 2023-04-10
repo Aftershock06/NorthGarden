@@ -10,15 +10,14 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-    now = datetime.datetime.now()
+    now = datetime.now()
     timeString = now.strftime("%m-%d-%Y %H:%M")
 
     with open('gardendata.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
         last_row = list(reader)[-1]
         time = last_row[0]
-        newtime = datetime.strptime(time,"%Y-%m-%dT%H:%M:%SZ")
-        newtime = newtime.strft(time, "%m-%d-%y %H:%M")
+        newtime = datetime.strptime(time,"%Y-%m-%dT%H:%M:%SZ").strftime("%m-%d-%y %I:%M")
         temperature = last_row[1]
         humidity = last_row[2]
         light = last_row[3]
