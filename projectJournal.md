@@ -15,4 +15,8 @@ Started the a new project journal to outline the work I have already done in the
     ```
     curl -X POST -H "Content-Type: application/json" -d '{"time": "04-08-2023 13:58","temperature": 20.5, "humidity": 50, "light": 75}' http://192.168.86.43/gardendata
     ```
-3. the current issue is that the pico is not actively recording data. 
+3. the current issue is that the pico is not actively recording data.
+
+## 18 Jul 2023
+
+1. there have been no updates to the project file. I haven't done any work with the project.  
