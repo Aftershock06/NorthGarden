@@ -1,5 +1,5 @@
 
-### April 7th 2023
+## April 7th 2023
 
 Started the a new project journal to outline the work I have already done in the journal to reflect on later. So far here is what has happened: 
 1. reSetup the github
